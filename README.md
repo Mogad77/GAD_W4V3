@@ -29,7 +29,7 @@ Perfect for pentesters who want everything in one place.
 
 ## 💻 Installation  
 ```bash
-git clone https://github.com/mogad77e/GAD_W4V3.git
+git clone https://github.com/mogad77/GAD_W4V3.git
 cd W4V3
 chmod +x W4V3.sh
 sudo ./W4V3.sh

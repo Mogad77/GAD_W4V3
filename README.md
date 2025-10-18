@@ -1,4 +1,4 @@
-![W4V3 Banner](assets/banner.jpg)
+![W4V3 Banner](assets/banner.png)
 
 # ⚡ W4V3 — Wireless Attack Toolkit
 ![platform](https://img.shields.io/badge/platform-Kali%20Linux%20%7C%20Debian-blue?style=for-the-badge)

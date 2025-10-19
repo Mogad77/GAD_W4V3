@@ -1,8 +1,10 @@
 #!/bin/bash
+# coding: utf-8
+# WiFi-Cracker Bash Script
 
 echo -e "\nInstalling Needed Tools"
 echo -e "\n"
-apt-get install -y aircrack-ng crunch xterm wordlists reaver pixiewps bully xterm wifite
+apt-get install -y aircrack-ng crunch xterm wordlists reaver pixiewps bully xterm wifite python3 git
 sleep 3
 clear
 
@@ -10,33 +12,46 @@ intro() {
     clear
     echo -e "\033[1;32m"
     cat << "EOF"
----------------------------------------------------------------------------------------
- ██████╗  █████╗ ██████╗      ██╗    ██╗██╗  ██╗██╗   ██╗███████╗
-██╔════╝ ██╔══██╗██╔══██╗     ██║    ██║██║  ██║██║   ██║██╔════╝
-██║  ███╗███████║██║  ██║     ██║ █╗ ██║███████║██║   ██║█████╗  
-██║   ██║██╔══██║██║  ██║     ██║███╗██║╚════██║╚██╗ ██╔╝██╔══╝  
-╚██████╔╝██║  ██║██████╔╝     ╚███╔███╔╝     ██║ ╚████╔╝ ███████╗
- ╚═════╝ ╚═╝  ╚═╝╚═════╝       ╚══╝╚══╝      ╚═╝  ╚═══╝  ╚══════╝
-                                    Coded By Mohamed Gad
----------------------------------------------------------------------------------------                                                                     
-(1)Start monitor mode       
-(2)Stop monitor mode                        
-(3)Scan Networks                            
-(4)Getting Handshake(monitor mode needed)   
-(5)Install Wireless tools                   
-(6)Crack Handshake with rockyou.txt (Handshake needed)
-(7)Crack Handshake with wordlist    (Handshake needed)
-(8)Crack Handshake without wordlist (Handshake,essid needed)
-(9)Create wordlist                                     
-(10)WPS Networks attacks (Bssid,monitor mode needed)
-(11)Scan for WPS Networks
 
-(0)About Me
-(00)Exit
------------------------------------------------------------------------
+      ██████╗    ███████╗   ██████╗        ██╗    ██╗ ██╗  ██╗ ██╗   ██╗ ██████╗ 
+     ██╔════╝    ██╔══██║   ██╔══██╗       ██║    ██║ ██║  ██║ ██║   ██║ ╚════██╗
+     ██║  ███╗   ███████║   ██║  ██║       ██║ █╗ ██║ ███████║ ██║   ██║  █████╔╝
+     ██║   ██║   ██╔══██║   ██║  ██║       ██║███╗██║ ╚════██║ ╚██╗ ██╔╝  ╚═══██╗
+     ╚██████╔╝   ██║  ██║   ██████╔╝       ╚███╔███╔╝      ██║  ╚████╔╝  ██████╔╝
+      ╚═════╝    ╚═╝  ╚═╝   ╚═════╝         ╚══╝╚══╝       ╚═╝   ╚═══╝   ╚═════╝ 
+                                                                                 
+           ╔═══════════════════════════════════════════════════════════╗
+           ║          [ Coded By: Mohamed Gad - GAD_W4V3 ]             ║
+           ╚═══════════════════════════════════════════════════════════╝
+                                                                    
 EOF
+    echo -e "\033[1;32m"
+    cat << "EOF"
+  ┌──────────────────────────────────────────────────────────────────────────────────┐
+  │                                MAIN MENU                                         │
+  ├──────────────────────────────────────────────────────────────────────────────────┤
+  │                                                                                  │
+  │  [1]  Start Monitor Mode                                                         │
+  │  [2]  Stop Monitor Mode                                                          │
+  │  [3]  Scan Networks                                                              │
+  │  [4]  Capture Handshake (Monitor Mode Required)                                  │
+  │  [5]  Install Wireless Tools                                                     │
+  │  [6]  Crack with RockYou Wordlist                                                │
+  │  [7]  Crack with Custom Wordlist                                                 │
+  │  [8]  Crack without Wordlist (Brute Force)                                       │
+  │  [9]  Generate Custom Wordlist                                                   │
+  │  [10] WPS Attack Suite                                                           │
+  │  [11] Scan WPS-Enabled Networks                                                  │
+  │  [12] CUPP - Advanced Wordlist Generator                                         │
+  │                                                                                  │
+  ├──────────────────────────────────────────────────────────────────────────────────┤
+  │  [0]  → About / Credits                                                          │
+  │  [00] → Exit Program                                                             │
+  └──────────────────────────────────────────────────────────────────────────────────┘
+EOF
+    echo -e "\033[1;33m"
+    echo -ne "    [?] Enter Your Choice → "
     echo -e "\033[0m"
-    echo -e "\nEnter your choice here : !# "
     read var
 
     case $var in
@@ -88,19 +103,27 @@ EOF
             ;;
         0)
             clear
+            NAME="mogad77"
+            URL="https://www.linkedin.com/in/mogad77/"
+            OSC_OPEN=$'\e]8;;'"$URL"$'\a' 
+            OSC_CLOSE=$'\e]8;;\a'
+            git_name="M 0 G @ D"
+            URL_git="https://github.com/Mogad77"
+            OSC_OPEN2=$'\e]8;;'"$URL_git"$'\a' 
+            OSC_CLOSE2=$'\e]8;;\a'
             
-NAME="mogad77"
-URL="https://www.linkedin.com/in/mogad77/"
-OSC_OPEN=$'\e]8;;'"$URL"$'\a'
-OSC_CLOSE=$'\e]8;;\a'
+            cat <<EOF
+═══════════════════════════════════════════════════════════════════
+              ╔═══════════════════════════════════╗
+              ║        [ A B O U T   M E ]        ║
+              ╚═══════════════════════════════════╝
 
-cat <<EOF
-YOUUUUU...
-My Name is Mohamed Gad
-linkedin: ${OSC_OPEN}${NAME}${OSC_CLOSE}
+    Name      : Mohamed Gad 
+    Linked-IN : ${OSC_OPEN}${NAME}${OSC_CLOSE}
+    GitHub    : ${OSC_OPEN2}${git_name}${OSC_CLOSE2}
+    
 
-CONTACT Me :)
-
+═══════════════════════════════════════════════════════════════════
 EOF
             exit 0
             ;;
@@ -143,23 +166,32 @@ EOF
             echo -e "\nEnter the maximum length of the password (8/64)?"
             read max
             cat << "EOF"
----------------------------------------------------------------------------------------
-(1)  Lowercase chars                                 (abcdefghijklmnopqrstuvwxyz)
-(2)  Uppercase chars                                 (ABCDEFGHIJKLMNOPQRSTUVWXYZ)
-(3)  Numeric chars                                   (0123456789)
-(4)  Symbol chars                                    (!#$%/=?{}[]-*:;)
-(5)  Lowercase + uppercase chars                     (abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ)
-(6)  Lowercase + numeric chars                       (abcdefghijklmnopqrstuvwxyz0123456789)
-(7)  Uppercase + numeric chars                       (ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789)
-(8)  Symbol + numeric chars                          (!#$%/=?{}[]-*:;0123456789)
-(9)  Lowercase + uppercase + numeric chars           (abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789) 
-(10) Lowercase + uppercase + symbol chars            (abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%/=?{}[]-*:;)
-(11) Lowercase + uppercase + numeric + symbol chars  (abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%/=?{}[]-*:;)
-(12) Your Own Words and numbers
------------------------------------------------------------------------------------------
-Crack Password Could Take Hours,Days,Weeks,Months to complete
-and the speed of cracking will reduce because you generate a Huge,Huge Passwordlist
-may reach to Hundreds of TeRa Bits so Be patient
+    ╔══════════════════════════════════════════════════════════════════════════════════╗
+    ║                           CHARACTER SET SELECTION                                ║
+    ╚══════════════════════════════════════════════════════════════════════════════════╝
+    
+    ┌────────────────────────────────────────────────────────────────────────────────┐
+    │  [1]  → Lowercase Only           (abcdefghijklmnopqrstuvwxyz)                  │
+    │  [2]  → Uppercase Only           (ABCDEFGHIJKLMNOPQRSTUVWXYZ)                  │
+    │  [3]  → Numbers Only             (0123456789)                                  │
+    │  [4]  → Symbols Only             (!#$%/=?{}[]-*:;)                             │
+    │  [5]  → Lower + Upper            (a-zA-Z)                                      │
+    │  [6]  → Lower + Numbers          (a-z0-9)                                      │
+    │  [7]  → Upper + Numbers          (A-Z0-9)                                      │
+    │  [8]  → Symbols + Numbers        (!@#0-9)                                      │
+    │  [9]  → Lower + Upper + Numbers  (a-zA-Z0-9)                                   │
+    │  [10] → Lower + Upper + Symbols  (a-zA-Z!@#)                                   │
+    │  [11] → ALL Characters           (a-zA-Z0-9!@#$%...)                           │
+    │  [12] → Custom Characters        (Your Own Set)                                │
+    └────────────────────────────────────────────────────────────────────────────────┘
+    
+    ╔══════════════════════════════════════════════════════════════════════════════════╗
+    ║  [!] WARNING: Brute Force Attack Detected                                        ║
+    ║  [!] Time Required: Hours → Days → Weeks → Months                                ║
+    ║  [!] Wordlist Size: May reach hundreds of TERABYTES                              ║
+    ║  [!] Performance: Will decrease with larger character sets                       ║
+    ║  [!] Recommendation: Use powerful hardware & be patient                          ║
+    ╚══════════════════════════════════════════════════════════════════════════════════╝
 EOF
             echo -e "\nEnter your choice here : ?"
             read set
@@ -203,13 +235,27 @@ EOF
         10)
             clear
             cat << "EOF"
-1)Reaver
-2)Bully
-3)wifite (Recommended)
-4)PixieWps
-
-0) Back to Main Menu
+    ╔════════════════════════════════════════════════════════════════════════════════╗
+    ║                              WPS ATTACK SUITE                                  ║
+    ╚════════════════════════════════════════════════════════════════════════════════╝
+    
+    ┌────────────────────────────────────────────────────────────────────────────────┐
+    │                                                                                │
+    │  [1] Reaver Attack          (Standard WPS PIN Attack)                          │
+    │  [2] Bully Attack           (Alternative WPS Attack)                           │
+    │  [3] Wifite                 (Automated - RECOMMENDED)                          │
+    │  [4] PixieWPS Attack        (WPS Pixie Dust Vulnerability)                     │
+    │                                                                                │
+    │  [0] Return to Main Menu                                                       │
+    │                                                                                │
+    └────────────────────────────────────────────────────────────────────────────────┘
 EOF
+            echo -e "\033[1;31m"
+            echo " 
+   ╔══════════════════════════════════════════════════════════════════════════════════╗
+   ║  [!] External WiFi Adapter Required (Must Support Monitor Mode & Injection)      ║
+   ╚══════════════════════════════════════════════════════════════════════════════════╝"
+             echo -e "\033[0m"
             echo "Choose the kind of the attack(External WIFI Adapter Require) ?"
             read attack
             case $attack in
@@ -255,6 +301,9 @@ EOF
             sleep 5
             intro
             ;;
+        12)
+            cupp_menu
+            ;;
         *)
             echo "Not Found"
             sleep 2
@@ -263,35 +312,150 @@ EOF
     esac
 }
 
+cupp_menu() {
+    clear
+    echo -e "\033[1;36m"
+    cat << "EOF"
+    ╔════════════════════════════════════════════════════════════════════════════════╗
+    ║                    CUPP - Common User Passwords Profiler                       ║
+    ║                      Create Targeted Wordlists for WiFi                        ║
+    ╚════════════════════════════════════════════════════════════════════════════════╝
+    
+    ┌────────────────────────────────────────────────────────────────────────────────┐
+    │                                                                                │
+    │  [1] Install/Update CUPP Tool                                                  │
+    │  [2] Interactive Mode        (Create wordlist from victim profile)             │
+    │  [3] Improve Existing List   (Enhance existing wordlist)                       │
+    │  [4] Download Wordlists      (Get wordlists from repository)                   │
+    │  [5] AlectoDB Download       (Get username/password database)                  │
+    │                                                                                │
+    │  [0] Return to Main Menu                                                       │
+    │                                                                                │
+    └────────────────────────────────────────────────────────────────────────────────┘
+EOF
+    echo -e "\033[1;33m"
+    echo -ne "    [?] Enter Your Choice → "
+    echo -e "\033[0m"
+    read cupp_choice
+
+    case $cupp_choice in
+        1)
+            echo -e "\n\033[1;32m[+] Installing CUPP Tool...\033[0m"
+            if [ -d "cupp" ]; then
+                echo -e "\033[1;33m[*] CUPP directory exists. Updating...\033[0m"
+                cd cupp
+                git pull
+                cd ..
+            else
+                git clone https://github.com/Mebus/cupp.git
+            fi
+            
+            if [ -f "cupp.py" ]; then
+                cp cupp.py cupp/
+                echo -e "\033[1;32m[+] Custom cupp.py copied to cupp directory\033[0m"
+            fi
+            
+            echo -e "\033[1;32m[+] CUPP installed successfully!\033[0m"
+            sleep 2
+            cupp_menu
+            ;;
+        2)
+            if [ ! -d "cupp" ]; then
+                echo -e "\033[1;31m[-] CUPP not installed. Installing now...\033[0m"
+                git clone https://github.com/Mebus/cupp.git
+            fi
+            echo -e "\n\033[1;32m[+] Starting CUPP Interactive Mode...\033[0m"
+            echo -e "\033[1;33m[*] Answer questions about your target to generate custom wordlist\033[0m"
+            sleep 2
+            cd cupp
+            python3 cupp.py -i
+            cd ..
+            echo -e "\n\033[1;32m[+] Wordlist generated! Check cupp directory\033[0m"
+            read -p "Press Enter to continue..."
+            cupp_menu
+            ;;
+        3)
+            if [ ! -d "cupp" ]; then
+                echo -e "\033[1;31m[-] CUPP not installed. Installing now...\033[0m"
+                git clone https://github.com/Mebus/cupp.git
+            fi
+            echo -e "\n\033[1;32m[+] Improve Existing Wordlist\033[0m"
+            echo -e "\nEnter the full path of wordlist to improve:"
+            read wordlist_path
+            if [ -f "$wordlist_path" ]; then
+                cd cupp
+                python3 cupp.py -w "$wordlist_path"
+                cd ..
+                echo -e "\n\033[1;32m[+] Improved wordlist created!\033[0m"
+            else
+                echo -e "\033[1;31m[-] File not found: $wordlist_path\033[0m"
+            fi
+            read -p "Press Enter to continue..."
+            cupp_menu
+            ;;
+        4)
+            if [ ! -d "cupp" ]; then
+                echo -e "\033[1;31m[-] CUPP not installed. Installing now...\033[0m"
+                git clone https://github.com/Mebus/cupp.git
+            fi
+            echo -e "\n\033[1;32m[+] Download Wordlists from Repository\033[0m"
+            cd cupp
+            python3 cupp.py -l
+            cd ..
+            read -p "Press Enter to continue..."
+            cupp_menu
+            ;;
+        5)
+            if [ ! -d "cupp" ]; then
+                echo -e "\033[1;31m[-] CUPP not installed. Installing now...\033[0m"
+                git clone https://github.com/Mebus/cupp.git
+            fi
+            echo -e "\n\033[1;32m[+] Downloading AlectoDB Database...\033[0m"
+            cd cupp
+            python3 cupp.py -a
+            cd ..
+            echo -e "\n\033[1;32m[+] AlectoDB downloaded successfully!\033[0m"
+            read -p "Press Enter to continue..."
+            cupp_menu
+            ;;
+        0)
+            intro
+            ;;
+        *)
+            echo -e "\033[1;31m[-] Invalid choice!\033[0m"
+            sleep 2
+            cupp_menu
+            ;;
+    esac
+}
+
 wire() {
     clear
     cat << "EOF"
-1) Aircrack-ng                          17) kalibrate-rtl
-2) Asleap                               18) KillerBee
-3) Bluelog                              19) Kismet
-4) BlueMaho                             20) mdk3
-5) Bluepot                              21) mfcuk
-6) BlueRanger                           22) mfoc
-7) Bluesnarfer                          23) mfterm
-8) Bully                                24) Multimon-NG
-9) coWPAtty                             25) PixieWPS
-10) crackle                             26) Reaver
-11) eapmd5pass                          27) redfang
-12) Fern Wifi Cracker                   28) RTLSDR Scanner
-13) Ghost Phisher                       29) Spooftooph
-14) GISKismet                           30) Wifi Honey
-15) Wifitap                             31) gr-scan
-16) Wifite                              32) Back to main menu
-90) airgeddon
-91) wifite v2
+ 1) Aircrack-ng                         18) Kismet
+ 2) Asleap                              19) mdk3
+ 3) Bluelog                             20) mfcuk
+ 4) BlueMaho                            21) mfoc
+ 5) Bluepot                             22) mfterm
+ 6) BlueRanger                          23) Multimon-NG
+ 7) Bluesnarfer                         24) PixieWPS
+ 8) Bully                               25) Reaver
+ 9) coWPAtty                            26) redfang
+10) crackle                             27) RTLSDR Scanner
+11) eapmd5pass                          28) Spooftooph
+12) Fern Wifi Cracker                   29) Wifi Honey
+13) Ghost Phisher                       30) Wifitap
+14) GISKismet                           31) Wifite
+15) gr-scan                             32) CUPP (Wordlist Generator)
+16) kalibrate-rtl                       33) airgeddon
+17) KillerBee                           34) wifite v2
 
-0)install all wireless tools
+ 0) Install All Wireless Tools
+00) Back to Main Menu
 EOF
     read -p "Enter The number of the tool : >>> " w
     case $w in
         1) apt-get update && apt-get install -y aircrack-ng ;;
-        90) echo "sudo apt-get update && apt-get install git && git clone https://github.com/v1s1t0r1sh3r3/airgeddon.git" ;;
-        91) echo "sudo apt-get update && apt-get install git && git clone https://github.com/derv82/wifite2.git" ;;
         2) apt-get update && apt-get install -y asleap ;;
         3) apt-get update && apt-get install -y bluelog ;;
         4) apt-get update && apt-get install -y bluemaho ;;
@@ -322,12 +486,33 @@ EOF
         29) apt-get update && apt-get install -y wifi-honey ;;
         30) apt-get update && apt-get install -y wifitap ;;
         31) apt-get update && apt-get install -y wifite ;;
-        32) intro ;;
-        0) apt-get install -y aircrack-ng asleap bluelog blueranger bluesnarfer bully cowpatty crackle eapmd5pass fern-wifi-cracker ghost-phisher giskismet gqrx kalibrate-rtl killerbee kismet mdk3 mfcuk mfoc mfterm multimon-ng pixiewps reaver redfang spooftooph wifi-honey wifitap wifite ;;
+        32) 
+            apt-get update && apt-get install -y python3 git
+            if [ -d "cupp" ]; then
+                echo "CUPP already installed. Updating..."
+                cd cupp && git pull && cd ..
+            else
+                git clone https://github.com/Mebus/cupp.git
+            fi
+            echo "CUPP installed/updated successfully!"
+            ;;
+        33) echo "Installing airgeddon..."
+            apt-get update && apt-get install -y git
+            git clone https://github.com/v1s1t0r1sh3r3/airgeddon.git
+            ;;
+        34) echo "Installing wifite v2..."
+            apt-get update && apt-get install -y git
+            git clone https://github.com/derv82/wifite2.git
+            ;;
+        0) 
+            echo "Installing ALL wireless tools..."
+            apt-get install -y aircrack-ng asleap bluelog blueranger bluesnarfer bully cowpatty crackle eapmd5pass fern-wifi-cracker ghost-phisher giskismet gqrx kalibrate-rtl killerbee kismet mdk3 mfcuk mfoc mfterm multimon-ng pixiewps reaver redfang spooftooph wifi-honey wifitap wifite python3 git
+            ;;
+        00) intro ;;
         *) echo "Not Found" ;;
     esac
     wire
 }
 
-# Start the script
+
 intro

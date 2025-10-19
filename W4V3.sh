@@ -1,7 +1,4 @@
 #!/bin/bash
-# coding: utf-8
-# WiFi-Cracker Bash Script
-
 echo -e "\nInstalling Needed Tools"
 echo -e "\n"
 apt-get install -y aircrack-ng crunch xterm wordlists reaver pixiewps bully xterm wifite python3 git
